@@ -490,14 +490,20 @@
                     <i class="fa-solid fa-shuffle"></i>
                     <i class="fa-solid fa-backward-step"></i>
                     <div class="cplay">
-                        <i class="fa-solid fa-circle-play"></i>
+                        <i class="fa-solid fa-circle-play" id="playPauseButton"></i>
                     </div>
-                    <i class="fa-solid fa-forward-step"></i>
+                    <i class="fa-solid fa-forward-step" id="skipButton"></i>
                     <i class="fa-solid fa-repeat"></i>
                 </div>
                 <div class="playback-bar d-flex">
-                    <p>0:00</p> <input type="range" step="1">
-                    <p>3:44</p>
+                    <div class="time-display ml-auto">
+                        <span id="currentTime">0:00</span>
+                    </div>
+                    <!-- Progress bar -->
+                    <div class="progress">
+                        <input type="range" min="0" max="100" value="0" class="slider" id="progressBar">
+                    </div>
+                    <span id="duration">0:00</span>
                 </div>
             </div>
 
@@ -507,7 +513,7 @@
                     <i class="fa-solid fa-sliders"></i>
                     <i class="fa-solid fa-headphones-simple"></i>
                     <i class="fa-solid fa-volume-low"></i>
-                    <input type="range" step="1">
+                    <input type="range" min="0" max="100" value="100" class="slider" id="volumeControl">
                     <i class="fa-solid fa-compress"></i>
                     <i class="fa-solid fa-up-right-and-down-left-from-center"></i>
 
@@ -521,6 +527,7 @@
 
 
     </div>
+    <script src="script.js"></script>
 </body>
 
 </html>

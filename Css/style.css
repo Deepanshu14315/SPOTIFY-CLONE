@@ -325,9 +325,14 @@ a {
 }
 .control-icon i:hover {
   opacity: 1;
+  cursor: pointer;
 }
 .playback-bar input {
-  width: 80%;
+  width: 110%;
+}
+#duration,#currentTime{
+  font-size: 0.75rem;
+  margin: 0rem 1rem;
 }
 .playback-bar p {
   font-size: 0.85rem;
